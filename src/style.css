@@ -10,22 +10,13 @@ body, html, #root{
     color: #C0A293;
 }
 
-
-.home{
-    text-align: left;
-    display:inline-block;
-    display: flex;
+.color{
+    background-color: #C0A293;
+    color: #344960;
 }
 
-.nav{
-
-    height: 450px;
-    width: 150px;
-    background-color: #C0A293;
-}
-
-.card{
-    background-color: #C0A293;
+.color_b{
+    color: #344960;
 }
 
 
