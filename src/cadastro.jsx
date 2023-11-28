@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./style.css";
 
 export default function Cadastrar(){
+    <Header/>
 
     const videoLocalStorage = JSON.parse(localStorage.getItem("Video")) || [];
    const [link, setLink] = useState("")
