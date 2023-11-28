@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 
-export default function Cadastrar(){
-    <Header/>
+export default function Cadastro(){
 
     const videoLocalStorage = JSON.parse(localStorage.getItem("Video")) || [];
    const [link, setLink] = useState("")
@@ -11,8 +10,8 @@ export default function Cadastrar(){
    const [artista, setArtista] = useState("");
    const [letra, setLetra] = useState("");
    const [vizualizacao, setVizualizacao] = useState(0);
-   const [video, setVideo] = useState(listaLocalStorage);
-   const [id, setId] = useState(listaLocalStorage[listaLocalStorage.length - 1]?.id +1 || 1);
+   const [video, setVideo] = useState(videoLocalStorage);
+   const [id, setId] = useState(videoLocalStorage[videoLocalStorage.length - 1]?.id +1 || 1);
    //pegando o tamanho da lista menos 1 para pegar o id e somando 1 para arrumar o id
 
    useEffect(() => { localStorage.setItem("Video", JSON.stringify(video)) }, [video]);
@@ -74,7 +73,7 @@ export default function Cadastrar(){
             {video.map((ativ)=>
             <ul key={ativ.id}>
                 <div class="video-card">
-                <p class="video-card-img">{ativ.imagem}</p>
+                <p class="video-card-p">{ativ.link}</p>
                <Link to={`/detalhe/${ativ.id}`}>
                     <p class="video-card-p">{ativ.titulo}</p>
                </Link>
