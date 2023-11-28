@@ -38,36 +38,51 @@ export default function Cadastro(){
     
     return(
         
-        <div class="lista">
+        <div class="video">
             
-            <h1 class="texto">Cadastre nova música</h1>
-            <p class="texto">Voltar para <Link to="/">home</Link></p>
+            <h1 class="texto-home">Cadastre nova música</h1>
+            <p class="texto-home">Voltar para <Link to="/">home</Link></p>
         
             
 
             <form onSubmit={salvar}>
 
-                <p class="texto">Link</p>
+                <p class="texto-home">Link</p>
                 <input value={Link} type="text"
                 onChange={(e)=>{ setLink(e.target.value)}} />
                 
-                <p class="texto">Título</p>
+                <p class="texto-home">Título</p>
                 <input value={titulo} type="text"
                 onChange={(e)=>{ setTitulo(e.target.value)}} />
 
-                <p class="texto">Artista</p>
+                <p class="texto-home">Artista</p>
                 <input value={artista} type="text"
                 onChange={(e)=>{ setArtista(e.target.value)}} />
 
-                <p class="texto">Letra</p>
+                <p class="texto-home">Letra</p>
                 <input value={letra} type="text"
                 onChange={(e)=>{ setLetra(e.target.value)}} />
 
-                <p class="texto">Vizualizacao</p>
+                <p class="texto-home">Vizualizacao</p>
                 <input value={vizualizacao} type="number"
                 onChange={(e)=>{ setVizualizacao(e.target.value)}} />
                 <br/>
                 <button class="btn btn-secondary botao">ADD</button>
+
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Cadastre uma nova música</h5>
+                        <div class="mb-3">
+                            <input value={Link} type="text" onChange={(e)=>{ setLink(e.target.value)}} class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder"/>
+                        </div>
+                        <div class="mb-3">
+                            <input value={titulo} type="text" onChange={(e)=>{ setTitulo(e.target.value)}} class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder"/>
+                        </div>
+
+                        <a href="#" class="btn btn-secondary">Go somewhere</a>
+                    </div>
+                 </div>
+
             </form>
 
             {video.map((ativ)=>
